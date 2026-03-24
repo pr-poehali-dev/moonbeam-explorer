@@ -17,29 +17,29 @@ export function ServicesSection() {
           <h2 className="mb-2 font-sans text-5xl font-light tracking-tight text-foreground md:text-6xl lg:text-7xl">
             Услуги
           </h2>
-          <p className="font-mono text-sm text-foreground/60 md:text-base">/ Наши компетенции</p>
+          <p className="font-mono text-sm text-foreground/60 md:text-base">/ Что мы предлагаем</p>
         </div>
 
         <div className="grid gap-8 md:grid-cols-2 md:gap-x-16 md:gap-y-12 lg:gap-x-24">
           {[
             {
-              title: "Веб-разработка",
-              description: "Создание современных веб-приложений любой сложности",
+              title: "Производство на заказ",
+              description: "Изготовим любой пиломатериал нужного размера и сечения под ваш проект",
               direction: "top",
             },
             {
-              title: "UI/UX Дизайн",
-              description: "Проектирование удобных и красивых интерфейсов",
+              title: "Доставка",
+              description: "Доставим пиломатериал до вашего объекта. Уточните условия по телефону",
               direction: "right",
             },
             {
-              title: "Мобильные приложения",
-              description: "Кроссплатформенная разработка для iOS и Android",
+              title: "Самовывоз",
+              description: "Приезжайте на производство — ул. Первомайская д. 18, пгт. Юрья, Кировская область",
               direction: "left",
             },
             {
-              title: "Консалтинг",
-              description: "Техническая экспертиза и стратегическое планирование",
+              title: "Оплата любым способом",
+              description: "Принимаем наличные и безналичный расчёт. Работаем с физлицами и организациями",
               direction: "bottom",
             },
           ].map((service, i) => (
