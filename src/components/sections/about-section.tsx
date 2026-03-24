@@ -33,12 +33,21 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
               }`}
               style={{ transitionDelay: "150ms" }}
             >
-              <div className="h-36 w-full overflow-hidden rounded-xl md:h-44">
-                <img
-                  src="https://cdn.poehali.dev/projects/60625735-e57a-4945-b9fa-7fd0ef5f4a38/bucket/e1d6d0a2-c383-45dd-8434-9ea9737e72c7.jpg"
-                  alt="Цех лесопилки — производство пиломатериала"
-                  className="h-full w-full object-cover"
-                />
+              <div className="grid grid-cols-2 gap-2">
+                <div className="h-28 overflow-hidden rounded-xl md:h-36">
+                  <img
+                    src="https://cdn.poehali.dev/projects/60625735-e57a-4945-b9fa-7fd0ef5f4a38/bucket/27d4179b-d929-4136-b806-17932078ab52.jpg"
+                    alt="Брёвна — собственное сырьё"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                <div className="h-28 overflow-hidden rounded-xl md:h-36">
+                  <img
+                    src="https://cdn.poehali.dev/projects/60625735-e57a-4945-b9fa-7fd0ef5f4a38/bucket/629897b5-9f11-4b09-81c2-cdaa3530dda8.jpg"
+                    alt="Строгальный станок на производстве"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
               </div>
             </div>
 

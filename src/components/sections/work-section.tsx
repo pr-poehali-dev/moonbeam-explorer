@@ -2,8 +2,8 @@ import { useReveal } from "@/hooks/use-reveal"
 
 const PRODUCTS = [
   {
-    url: "https://cdn.poehali.dev/projects/60625735-e57a-4945-b9fa-7fd0ef5f4a38/bucket/94d47921-fff7-4c9c-b9cd-ae88d471d3f3.jpg",
-    alt: "Евровагонка — готовая продукция",
+    url: "https://cdn.poehali.dev/projects/60625735-e57a-4945-b9fa-7fd0ef5f4a38/bucket/ca269bce-e309-4513-9a6d-90f843f13a3d.jpg",
+    alt: "Брус на грузовике — готовый к отгрузке",
     number: "01",
     title: "Обрезной пиломатериал",
     category: "Доска · Брус",
@@ -11,8 +11,8 @@ const PRODUCTS = [
     direction: "left",
   },
   {
-    url: "https://cdn.poehali.dev/projects/60625735-e57a-4945-b9fa-7fd0ef5f4a38/bucket/af371a40-c57c-4ebb-82a1-85456a0eb9b9.jpg",
-    alt: "Склад готовой продукции",
+    url: "https://cdn.poehali.dev/projects/60625735-e57a-4945-b9fa-7fd0ef5f4a38/bucket/f2cd1db2-4902-4a2e-92c8-0c10a0d12a36.jpg",
+    alt: "Склад евровагонки EUROSTANDART",
     number: "02",
     title: "Строганая доска",
     category: "Евровагонка · Штиль · Имитация бруса",
