@@ -50,9 +50,9 @@ export function WorkSection() {
           <p className="font-mono text-sm text-foreground/60 md:text-base">/ Что мы производим</p>
         </div>
 
-        <div className="space-y-4 md:space-y-5">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-6">
           {PRODUCTS.map((item, i) => (
-            <ProductRow key={i} item={item} index={i} isVisible={isVisible} />
+            <ProductCard key={i} item={item} index={i} isVisible={isVisible} />
           ))}
         </div>
       </div>
@@ -60,7 +60,7 @@ export function WorkSection() {
   )
 }
 
-function ProductRow({
+function ProductCard({
   item,
   index,
   isVisible,
@@ -70,41 +70,28 @@ function ProductRow({
   isVisible: boolean
 }) {
   const getRevealClass = () => {
-    if (!isVisible) {
-      return item.direction === "left" ? "-translate-x-16 opacity-0" : "translate-x-16 opacity-0"
-    }
-    return "translate-x-0 opacity-100"
+    if (!isVisible) return "translate-y-12 opacity-0"
+    return "translate-y-0 opacity-100"
   }
 
   return (
     <div
-      className={`group flex items-center gap-5 border-b border-foreground/10 pb-4 transition-all duration-700 hover:border-foreground/20 md:gap-10 md:pb-5 ${getRevealClass()}`}
-      style={{
-        transitionDelay: `${index * 150}ms`,
-        marginLeft: index % 2 === 0 ? "0" : "auto",
-        maxWidth: index % 2 === 0 ? "85%" : "90%",
-      }}
+      className={`group overflow-hidden rounded-2xl transition-all duration-700 ${getRevealClass()}`}
+      style={{ transitionDelay: `${index * 150}ms` }}
     >
-      <div className="h-12 w-20 shrink-0 overflow-hidden rounded-lg md:h-16 md:w-28">
+      <div className="relative h-52 w-full overflow-hidden md:h-64">
         <img
           src={item.url}
           alt={item.alt}
-          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
-      </div>
-      <div className="flex flex-1 items-center justify-between gap-4">
-        <div className="flex items-baseline gap-3 md:gap-8">
-          <span className="font-mono text-sm text-foreground/30 transition-colors group-hover:text-foreground/50 md:text-base">
-            {item.number}
-          </span>
-          <div>
-            <h3 className="mb-0.5 font-sans text-xl font-light text-foreground transition-transform duration-300 group-hover:translate-x-2 md:text-3xl lg:text-4xl">
-              {item.title}
-            </h3>
-            <p className="font-mono text-xs text-foreground/50 md:text-sm">{item.category}</p>
-          </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+        <span className="absolute right-4 top-4 font-mono text-xs text-white/50">{item.year}</span>
+        <div className="absolute bottom-0 left-0 p-4">
+          <span className="font-mono text-xs text-white/50">{item.number}</span>
+          <h3 className="mt-1 font-sans text-xl font-light text-white md:text-2xl">{item.title}</h3>
+          <p className="mt-0.5 font-mono text-xs text-white/70">{item.category}</p>
         </div>
-        <span className="font-mono text-xs text-foreground/30 md:text-sm">{item.year}</span>
       </div>
     </div>
   )

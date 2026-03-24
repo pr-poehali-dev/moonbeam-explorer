@@ -95,7 +95,7 @@ function ServiceCard({
     >
       {service.img && (
         <div className={`mb-3 grid gap-2 ${service.img2 ? "grid-cols-2" : "grid-cols-1"}`}>
-          <div className="h-28 overflow-hidden rounded-xl md:h-32">
+          <div className="h-44 overflow-hidden rounded-xl md:h-52">
             <img
               src={service.img}
               alt={service.title}
@@ -103,7 +103,7 @@ function ServiceCard({
             />
           </div>
           {service.img2 && (
-            <div className="h-28 overflow-hidden rounded-xl md:h-32">
+            <div className="h-44 overflow-hidden rounded-xl md:h-52">
               <img
                 src={service.img2}
                 alt={service.title + " 2"}

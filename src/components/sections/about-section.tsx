@@ -34,18 +34,18 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
               style={{ transitionDelay: "150ms" }}
             >
               <div className="grid grid-cols-2 gap-2">
-                <div className="h-28 overflow-hidden rounded-xl md:h-36">
+                <div className="h-40 overflow-hidden rounded-xl md:h-52">
                   <img
                     src="https://cdn.poehali.dev/projects/60625735-e57a-4945-b9fa-7fd0ef5f4a38/bucket/27d4179b-d929-4136-b806-17932078ab52.jpg"
                     alt="Брёвна — собственное сырьё"
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
                   />
                 </div>
-                <div className="h-28 overflow-hidden rounded-xl md:h-36">
+                <div className="h-40 overflow-hidden rounded-xl md:h-52">
                   <img
                     src="https://cdn.poehali.dev/projects/60625735-e57a-4945-b9fa-7fd0ef5f4a38/bucket/629897b5-9f11-4b09-81c2-cdaa3530dda8.jpg"
                     alt="Строгальный станок на производстве"
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
                   />
                 </div>
               </div>
