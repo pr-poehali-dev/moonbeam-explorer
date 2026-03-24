@@ -220,9 +220,9 @@ export default function Index() {
           className="flex items-center gap-2 transition-transform hover:scale-105"
         >
           <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-foreground/15 backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-foreground/25">
-            <span className="font-sans text-xl font-bold text-foreground">Ю</span>
+            <span className="font-sans text-xl font-bold text-foreground">Л</span>
           </div>
-          <span className="font-sans text-xl font-semibold tracking-tight text-foreground">ЮряДоска</span>
+          <span className="font-sans text-xl font-semibold tracking-tight text-foreground">Лесной мастер</span>
         </button>
 
         <div className="hidden items-center gap-8 md:flex">
@@ -302,6 +302,28 @@ export default function Index() {
         <AboutSection scrollToSection={scrollToSection} />
         <ContactSection />
       </div>
+
+      {/* Footer */}
+      <footer className="fixed bottom-0 left-0 right-0 z-40 border-t border-foreground/10 bg-black/40 backdrop-blur-md">
+        <div className="mx-auto max-w-7xl px-4 py-2 md:px-12">
+          <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-1">
+            <span className="font-sans text-xs font-semibold text-foreground/80">
+              ИП Потапов Анатолий Дмитриевич
+            </span>
+            <div className="flex flex-wrap gap-x-4 gap-y-0.5">
+              <span className="font-mono text-[10px] text-foreground/50">ИНН: 433800182500</span>
+              <span className="font-mono text-[10px] text-foreground/50">ОГРН: 304433825900047</span>
+              <span className="font-mono text-[10px] text-foreground/50">БИК: 044525845</span>
+              <span className="font-mono text-[10px] text-foreground/50">р/с: 40802810400220131003</span>
+              <span className="hidden font-mono text-[10px] text-foreground/50 md:inline">к/с: 30101810745374525845</span>
+              <span className="hidden font-mono text-[10px] text-foreground/50 lg:inline">ПАО «Норвик Банк», г. Москва</span>
+            </div>
+            <span className="hidden font-mono text-[10px] text-foreground/40 xl:inline">
+              613600, Кировская обл., п. Юрья, ул. Кирова, 86
+            </span>
+          </div>
+        </div>
+      </footer>
 
       <style>{`
         div::-webkit-scrollbar {
