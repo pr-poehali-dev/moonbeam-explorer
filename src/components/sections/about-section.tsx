@@ -11,10 +11,10 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
     >
       <div className="mx-auto w-full max-w-7xl">
         <div className="grid gap-8 md:grid-cols-2 md:gap-16 lg:gap-24">
-          {/* Left side - Story */}
+          {/* Left side - Story + Photo */}
           <div>
             <div
-              className={`mb-6 transition-all duration-700 md:mb-12 ${
+              className={`mb-5 transition-all duration-700 md:mb-8 ${
                 isVisible ? "translate-y-0 opacity-100" : "-translate-y-12 opacity-0"
               }`}
             >
@@ -25,6 +25,21 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
                 <br />
                 <span className="text-foreground/40">без посредников</span>
               </h2>
+            </div>
+
+            <div
+              className={`mb-5 transition-all duration-700 md:mb-6 ${
+                isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+              }`}
+              style={{ transitionDelay: "150ms" }}
+            >
+              <div className="h-36 w-full overflow-hidden rounded-xl md:h-44">
+                <img
+                  src="https://cdn.poehali.dev/projects/60625735-e57a-4945-b9fa-7fd0ef5f4a38/bucket/e1d6d0a2-c383-45dd-8434-9ea9737e72c7.jpg"
+                  alt="Цех лесопилки — производство пиломатериала"
+                  className="h-full w-full object-cover"
+                />
+              </div>
             </div>
 
             <div

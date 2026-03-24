@@ -20,27 +20,31 @@ export function ServicesSection() {
           <p className="font-mono text-sm text-foreground/60 md:text-base">/ Что мы предлагаем</p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 md:gap-x-16 md:gap-y-12 lg:gap-x-24">
+        <div className="grid gap-6 md:grid-cols-2 md:gap-x-16 md:gap-y-10 lg:gap-x-24">
           {[
             {
               title: "Производство на заказ",
               description: "Изготовим любой пиломатериал нужного размера и сечения под ваш проект",
               direction: "top",
+              img: null,
             },
             {
               title: "Доставка",
               description: "Доставим пиломатериал до вашего объекта. Уточните условия по телефону",
               direction: "right",
+              img: "https://cdn.poehali.dev/projects/60625735-e57a-4945-b9fa-7fd0ef5f4a38/bucket/2141055b-1b26-4286-86b8-5c7ed6fa88bc.jpg",
             },
             {
               title: "Самовывоз",
               description: "Приезжайте на производство — ул. Первомайская д. 18, пгт. Юрья, Кировская область",
               direction: "left",
+              img: null,
             },
             {
               title: "Оплата любым способом",
               description: "Принимаем наличные и безналичный расчёт. Работаем с физлицами и организациями",
               direction: "bottom",
+              img: null,
             },
           ].map((service, i) => (
             <ServiceCard key={i} service={service} index={i} isVisible={isVisible} />
@@ -56,7 +60,7 @@ function ServiceCard({
   index,
   isVisible,
 }: {
-  service: { title: string; description: string; direction: string }
+  service: { title: string; description: string; direction: string; img: string | null }
   index: number
   isVisible: boolean
 }) {
@@ -85,6 +89,15 @@ function ServiceCard({
         transitionDelay: `${index * 150}ms`,
       }}
     >
+      {service.img && (
+        <div className="mb-3 h-28 w-full overflow-hidden rounded-xl md:h-32">
+          <img
+            src={service.img}
+            alt={service.title}
+            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        </div>
+      )}
       <div className="mb-3 flex items-center gap-3">
         <div className="h-px w-8 bg-foreground/30 transition-all duration-300 group-hover:w-12 group-hover:bg-foreground/50" />
         <span className="font-mono text-xs text-foreground/60">0{index + 1}</span>
